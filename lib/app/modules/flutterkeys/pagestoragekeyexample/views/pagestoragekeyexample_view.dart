@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutterwidgetsandconcepts/app/routes/app_pages.dart';
+import 'package:flutterwidgetsandconcepts/utils/appStyle.dart';
 
 import 'package:get/get.dart';
 
+import '../../../../../extension/sizedboxextension.dart';
+import '../../../../../widgets/customButton.dart';
 import '../controllers/pagestoragekeyexample_controller.dart';
 
 class PagestoragekeyexampleView
@@ -11,21 +15,18 @@ class PagestoragekeyexampleView
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PagestoragekeyexampleView'),
+        title: const Text('Pagestoragekey Example',style: AppStyle.appbartxt,),
         centerTitle: true,
-        bottom: TabBar(
-          controller: controller.tabController,
-          tabs: controller.tabs,
-        ),
+       automaticallyImplyLeading: false,
       ),
-      body: TabBarView(
-        controller: controller.tabController,
-        children: const [
-          Center(child: Text("Home Screen")),
-          Center(child: Text("Profile Screen")),
-          Center(child: Text("Settings Screen")),
-        ],
-      ),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(mainAxisAlignment:MainAxisAlignment.center,children: [
+          CustomButton(onPressed:(){Get.toNamed(Routes.KEYEXAMPLE1);},title: "Example 1"),
+          10.ph,
+          CustomButton(onPressed:(){Get.toNamed(Routes.KEYEXAMPLE2);},title: "Example 2"),
+        ],),
+      )
     );
 
   }

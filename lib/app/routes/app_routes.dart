@@ -7,6 +7,10 @@ abstract class Routes {
   static const FLUTTERKEYS = _Paths.FLUTTERKEYS;
   static const PAGESTORAGEKEYEXAMPLE =
       _Paths.FLUTTERKEYS + _Paths.PAGESTORAGEKEYEXAMPLE;
+  static const KEYEXAMPLE1 =
+      _Paths.FLUTTERKEYS + _Paths.PAGESTORAGEKEYEXAMPLE + _Paths.KEYEXAMPLE1;
+  static const KEYEXAMPLE2 =
+      _Paths.FLUTTERKEYS + _Paths.PAGESTORAGEKEYEXAMPLE + _Paths.KEYEXAMPLE2;
 }
 
 abstract class _Paths {
@@ -14,4 +18,6 @@ abstract class _Paths {
   static const HOME = '/home';
   static const FLUTTERKEYS = '/flutterkeys';
   static const PAGESTORAGEKEYEXAMPLE = '/pagestoragekeyexample';
+  static const KEYEXAMPLE1 = '/keyexample1';
+  static const KEYEXAMPLE2 = '/keyexample2';
 }
