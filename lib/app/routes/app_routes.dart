@@ -11,6 +11,12 @@ abstract class Routes {
       _Paths.FLUTTERKEYS + _Paths.PAGESTORAGEKEYEXAMPLE + _Paths.KEYEXAMPLE1;
   static const KEYEXAMPLE2 =
       _Paths.FLUTTERKEYS + _Paths.PAGESTORAGEKEYEXAMPLE + _Paths.KEYEXAMPLE2;
+  static const UNIQUEKEY_PAGE = _Paths.FLUTTERKEYS + _Paths.UNIQUEKEY_PAGE;
+  static const VALUEKEY_PAGE = _Paths.FLUTTERKEYS + _Paths.VALUEKEY_PAGE;
+  static const VALUEKEYEXAMPLE1 =
+      _Paths.FLUTTERKEYS + _Paths.VALUEKEY_PAGE + _Paths.VALUEKEYEXAMPLE1;
+  static const VALUEKEYEXAMPLE2 =
+      _Paths.FLUTTERKEYS + _Paths.VALUEKEY_PAGE + _Paths.VALUEKEYEXAMPLE2;
 }
 
 abstract class _Paths {
@@ -20,4 +26,8 @@ abstract class _Paths {
   static const PAGESTORAGEKEYEXAMPLE = '/pagestoragekeyexample';
   static const KEYEXAMPLE1 = '/keyexample1';
   static const KEYEXAMPLE2 = '/keyexample2';
+  static const UNIQUEKEY_PAGE = '/uniquekey-page';
+  static const VALUEKEY_PAGE = '/valuekey-page';
+  static const VALUEKEYEXAMPLE1 = '/valuekeyexample1';
+  static const VALUEKEYEXAMPLE2 = '/valuekeyexample2';
 }

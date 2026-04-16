@@ -23,7 +23,13 @@ class FlutterkeysView extends GetView<FlutterkeysController> {
         child: Column(mainAxisAlignment:MainAxisAlignment.center,children: [
           CustomButton(onPressed:(){Get.toNamed(Routes.PAGESTORAGEKEYEXAMPLE);},title: "PageStorageKey"),
           10.ph,
-          CustomButton(onPressed:(){},title: "Value Key"),
+          CustomButton(onPressed:(){Get.toNamed(Routes.VALUEKEY_PAGE);},title: "Value Key"),
+          10.ph,
+          CustomButton(onPressed:(){Get.toNamed(Routes.UNIQUEKEY_PAGE);},title: "Unique key"),
+          10.ph,
+          CustomButton(onPressed:(){},title: "Object Key"),
+          10.ph,
+          CustomButton(onPressed:(){},title: "Global Key"),
         ],),
       )
     );

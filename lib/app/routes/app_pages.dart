@@ -7,6 +7,14 @@ import '../modules/flutterkeys/pagestoragekeyexample/keyexample1/views/keyexampl
 import '../modules/flutterkeys/pagestoragekeyexample/keyexample2/bindings/keyexample2_binding.dart';
 import '../modules/flutterkeys/pagestoragekeyexample/keyexample2/views/keyexample2_view.dart';
 import '../modules/flutterkeys/pagestoragekeyexample/views/pagestoragekeyexample_view.dart';
+import '../modules/flutterkeys/uniquekeyPage/bindings/uniquekey_page_binding.dart';
+import '../modules/flutterkeys/uniquekeyPage/views/uniquekey_page_view.dart';
+import '../modules/flutterkeys/valuekeyPage/bindings/valuekey_page_binding.dart';
+import '../modules/flutterkeys/valuekeyPage/valuekeyexample1/bindings/valuekeyexample1_binding.dart';
+import '../modules/flutterkeys/valuekeyPage/valuekeyexample1/views/valuekeyexample1_view.dart';
+import '../modules/flutterkeys/valuekeyPage/valuekeyexample2/bindings/valuekeyexample2_binding.dart';
+import '../modules/flutterkeys/valuekeyPage/valuekeyexample2/views/valuekeyexample2_view.dart';
+import '../modules/flutterkeys/valuekeyPage/views/valuekey_page_view.dart';
 import '../modules/flutterkeys/views/flutterkeys_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -43,6 +51,28 @@ class AppPages {
               name: _Paths.KEYEXAMPLE2,
               page: () => const Keyexample2View(),
               binding: Keyexample2Binding(),
+            ),
+          ],
+        ),
+        GetPage(
+          name: _Paths.UNIQUEKEY_PAGE,
+          page: () => const UniquekeyPageView(),
+          binding: UniquekeyPageBinding(),
+        ),
+        GetPage(
+          name: _Paths.VALUEKEY_PAGE,
+          page: () => const ValuekeyPageView(),
+          binding: ValuekeyPageBinding(),
+          children: [
+            GetPage(
+              name: _Paths.VALUEKEYEXAMPLE1,
+              page: () => const Valuekeyexample1View(),
+              binding: Valuekeyexample1Binding(),
+            ),
+            GetPage(
+              name: _Paths.VALUEKEYEXAMPLE2,
+              page: () => const Valuekeyexample2View(),
+              binding: Valuekeyexample2Binding(),
             ),
           ],
         ),

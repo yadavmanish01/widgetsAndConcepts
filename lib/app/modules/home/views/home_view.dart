@@ -19,7 +19,7 @@ class HomeView extends GetView<HomeController> {
         children: [
           CustomButton(onPressed:(){Get.toNamed(Routes.FLUTTERKEYS);},title: "Keys"),
           10.ph,
-          CustomButton(title: "another"),
+          CustomButton(onPressed:(){},title: "Isolate"),
         ],
       ),
     );
