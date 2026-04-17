@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/computepage/bindings/computepage_binding.dart';
+import '../modules/computepage/views/computepage_view.dart';
 import '../modules/flutterkeys/bindings/flutterkeys_binding.dart';
 import '../modules/flutterkeys/pagestoragekeyexample/bindings/pagestoragekeyexample_binding.dart';
 import '../modules/flutterkeys/pagestoragekeyexample/keyexample1/bindings/keyexample1_binding.dart';
@@ -77,6 +79,11 @@ class AppPages {
           ],
         ),
       ],
+    ),
+    GetPage(
+      name: _Paths.COMPUTEPAGE,
+      page: () => const ComputepageView(),
+      binding: ComputepageBinding(),
     ),
   ];
 }

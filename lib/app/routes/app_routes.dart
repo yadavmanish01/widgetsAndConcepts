@@ -17,6 +17,7 @@ abstract class Routes {
       _Paths.FLUTTERKEYS + _Paths.VALUEKEY_PAGE + _Paths.VALUEKEYEXAMPLE1;
   static const VALUEKEYEXAMPLE2 =
       _Paths.FLUTTERKEYS + _Paths.VALUEKEY_PAGE + _Paths.VALUEKEYEXAMPLE2;
+  static const COMPUTEPAGE = _Paths.COMPUTEPAGE;
 }
 
 abstract class _Paths {
@@ -30,4 +31,5 @@ abstract class _Paths {
   static const VALUEKEY_PAGE = '/valuekey-page';
   static const VALUEKEYEXAMPLE1 = '/valuekeyexample1';
   static const VALUEKEYEXAMPLE2 = '/valuekeyexample2';
+  static const COMPUTEPAGE = '/computepage';
 }
