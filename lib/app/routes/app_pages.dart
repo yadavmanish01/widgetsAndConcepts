@@ -20,6 +20,8 @@ import '../modules/flutterkeys/valuekeyPage/views/valuekey_page_view.dart';
 import '../modules/flutterkeys/views/flutterkeys_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/oopspage/bindings/oopspage_binding.dart';
+import '../modules/oopspage/views/oopspage_view.dart';
 
 part 'app_routes.dart';
 
@@ -84,6 +86,11 @@ class AppPages {
       name: _Paths.COMPUTEPAGE,
       page: () => const ComputepageView(),
       binding: ComputepageBinding(),
+    ),
+    GetPage(
+      name: _Paths.OOPSPAGE,
+      page: () => const OopspageView(),
+      binding: OopspageBinding(),
     ),
   ];
 }

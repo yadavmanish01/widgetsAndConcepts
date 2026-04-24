@@ -20,7 +20,7 @@ class ComputepageView extends GetView<ComputepageController> {
             Image.asset("assets/gif/abcd.gif"),
             ElevatedButton.icon(
               onPressed: () async {
-                var json = await FetchData(10000);
+                var json = await FetchData(40000);
                 debugPrint('-----Json parsed: length ${json.length}');
               },
               label: Text("async await"),
@@ -29,7 +29,7 @@ class ComputepageView extends GetView<ComputepageController> {
             10.ph,
             ElevatedButton.icon(
               onPressed: () async {
-                var json = await compute(FetchData, 10000);
+                var json = await compute(FetchData, 40000);
                 debugPrint('-----Json parsed: length ${json.length}');
               },
               label: Text("compute"),
