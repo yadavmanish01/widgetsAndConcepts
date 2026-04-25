@@ -22,6 +22,10 @@ class HomeView extends GetView<HomeController> {
           CustomButton(onPressed:(){Get.toNamed(Routes.COMPUTEPAGE);},title: "Isolate"),
           10.ph,
           CustomButton(onPressed:(){Get.toNamed(Routes.OOPSPAGE);},title: "OOPS"),
+          10.ph,
+          CustomButton(onPressed:(){Get.toNamed(Routes.OOPSPAGE);},title: "OOPS"),
+          10.ph,
+          CustomButton(onPressed:(){Get.toNamed(Routes.NOTIFICATIONPAGE);},title: "Notification"),
         ],
       ),
     );

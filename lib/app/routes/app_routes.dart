@@ -19,6 +19,8 @@ abstract class Routes {
       _Paths.FLUTTERKEYS + _Paths.VALUEKEY_PAGE + _Paths.VALUEKEYEXAMPLE2;
   static const COMPUTEPAGE = _Paths.COMPUTEPAGE;
   static const OOPSPAGE = _Paths.OOPSPAGE;
+  static const NOTIFICATIONPAGE = _Paths.NOTIFICATIONPAGE;
+  static const SPLASH = _Paths.SPLASH;
 }
 
 abstract class _Paths {
@@ -34,4 +36,6 @@ abstract class _Paths {
   static const VALUEKEYEXAMPLE2 = '/valuekeyexample2';
   static const COMPUTEPAGE = '/computepage';
   static const OOPSPAGE = '/oopspage';
+  static const NOTIFICATIONPAGE = '/notificationpage';
+  static const SPLASH = '/splash';
 }

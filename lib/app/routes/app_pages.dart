@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/Splash/bindings/splash_binding.dart';
+import '../modules/Splash/views/splash_view.dart';
 import '../modules/computepage/bindings/computepage_binding.dart';
 import '../modules/computepage/views/computepage_view.dart';
 import '../modules/flutterkeys/bindings/flutterkeys_binding.dart';
@@ -20,6 +22,8 @@ import '../modules/flutterkeys/valuekeyPage/views/valuekey_page_view.dart';
 import '../modules/flutterkeys/views/flutterkeys_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/notificationpage/bindings/notificationpage_binding.dart';
+import '../modules/notificationpage/views/notificationpage_view.dart';
 import '../modules/oopspage/bindings/oopspage_binding.dart';
 import '../modules/oopspage/views/oopspage_view.dart';
 
@@ -28,7 +32,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.SPLASH;
 
   static final routes = [
     GetPage(
@@ -91,6 +95,16 @@ class AppPages {
       name: _Paths.OOPSPAGE,
       page: () => const OopspageView(),
       binding: OopspageBinding(),
+    ),
+    GetPage(
+      name: _Paths.NOTIFICATIONPAGE,
+      page: () => const NotificationpageView(),
+      binding: NotificationpageBinding(),
+    ),
+    GetPage(
+      name: _Paths.SPLASH,
+      page: () => const SplashView(),
+      binding: SplashBinding(),
     ),
   ];
 }
