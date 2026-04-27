@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 class ComputepageController extends GetxController {
   //TODO: Implement ComputepageController
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -19,5 +18,4 @@ class ComputepageController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
 }
