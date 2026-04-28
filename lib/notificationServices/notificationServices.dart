@@ -3,7 +3,9 @@ import 'dart:math';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:flutterwidgetsandconcepts/app/routes/app_pages.dart';
 import 'package:flutterwidgetsandconcepts/extension/logger.dart';
+import 'package:get/get.dart';
 
 class Notificationservices {
   FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
@@ -41,7 +43,7 @@ class Notificationservices {
     });
   }
 
-  void LocalFirebaseInit(BuildContext context, RemoteMessage message) async {
+  void LocalFirebaseInit( RemoteMessage message) async {
     const AndroidInitializationSettings initializationSettingsAndroid =
         AndroidInitializationSettings('ic_notification');
     final DarwinInitializationSettings initializationSettingsDarwin =
@@ -58,7 +60,9 @@ class Notificationservices {
 
     await _flutterLocalNotificationsPlugin.initialize(
       settings: initializationSettings,
-      onDidReceiveNotificationResponse: (Payload) {},
+      onDidReceiveNotificationResponse: (Payload) {
+        handleMessage( message);
+      },
     );
   }
 
@@ -67,6 +71,8 @@ class Notificationservices {
       logger.d(message.notification?.title.toString());
       debugPrint(message.notification?.body.toString());
       showNotification(message);
+
+      LocalFirebaseInit(message);
     });
   }
 
@@ -105,4 +111,11 @@ class Notificationservices {
     notificationDetails: notificationDetails);
      });
   }
+
+  //
+void handleMessage(RemoteMessage message){
+    if(message.data['type']=='msg'){
+      Get.toNamed(Routes.NOTIFICATIONPAGE);
+    }
+}
 }
